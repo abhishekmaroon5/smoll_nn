@@ -242,6 +242,36 @@ This project is open source and available under the MIT License.
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
+## Model Inspection
+
+### `read_model_weights.py`
+
+This script allows you to inspect the weights, biases, and architecture details of a saved model (`.pkl` file). It can print the model structure and parameters to the console in a human-readable format or save them as a JSON file.
+
+**Usage:**
+
+```bash
+python read_model_weights.py <path_to_model.pkl> [options]
+```
+
+**Arguments & Options:**
+
+*   `<path_to_model.pkl>`: (Required) Path to the saved model file (e.g., `models/trained_model.pkl`).
+*   `--output <filename.json>`: (Optional) If provided, saves the model details to the specified JSON file.
+*   `--pretty`: (Optional) If specified, pretty-prints the JSON output to the console or file, making it more readable.
+
+**Examples:**
+
+1.  Print model details to the console (pretty-printed):
+    ```bash
+    python read_model_weights.py models/trained_model.pkl --pretty
+    ```
+
+2.  Save model details to a JSON file (pretty-printed):
+    ```bash
+    python read_model_weights.py models/trained_model.pkl --output model_details.json --pretty
+    ```
+
 ## Future Enhancements
 
 Potential improvements could include:
